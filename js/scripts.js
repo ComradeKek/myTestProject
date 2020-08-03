@@ -18,7 +18,7 @@ function burgerMenu() {
 
   function showSubMenu() {
     
-    this.scrollIntoView();
+    
     let parent = this.parentNode;
     if(this.classList.contains('active')){
         this.classList.remove('active');
@@ -29,6 +29,7 @@ function burgerMenu() {
         }
         
     } else {
+        this.scrollIntoView();
         if (parent.getElementsByClassName('sub_menu')[0] != null ) {
 
             Array.from(document.querySelectorAll('.open-sub_menu')).forEach(item => {
